@@ -5,22 +5,7 @@
 extern "C" {
 #endif /* __cplusplus */
 
-#include "erl_nif.h"
-
-#if ERL_NIF_MAJOR_VERSION == 1 && ERL_NIF_MINOR_VERSION == 0
-
-#define enif_open_resource_type_compat enif_open_resource_type
-#define enif_alloc_resource_compat enif_alloc_resource
-#define enif_release_resource_compat enif_release_resource
-#define enif_alloc_binary_compat enif_alloc_binary
-#define enif_realloc_binary_compat enif_realloc_binary
-#define enif_release_binary_compat enif_release_binary
-#define enif_alloc_compat enif_alloc
-#define enif_free_compat enif_free
-
-#endif /* R13B04 */
-
-#if ERL_NIF_MAJOR_VERSION == 2 && ERL_NIF_MINOR_VERSION == 0
+#include <erl_nif.h>
 
 #define enif_open_resource_type_compat(E, N, D, F, T) \
     enif_open_resource_type(E, NULL, N, D, F, T)
@@ -45,9 +30,6 @@ extern "C" {
 
 #define enif_free_compat(E, P) \
     enif_free(P)
-
-#endif /* R14 */
-
 
 
 #ifdef __cplusplus
