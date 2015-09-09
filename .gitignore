@@ -1,7 +1,8 @@
-ebin/*
 src/*.swp
 src/*/*.swp
 c_src/*.o
+c_src/*.d
 priv/*.so
 logs/*
 test/*.beam
+_build
