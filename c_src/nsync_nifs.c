@@ -21,8 +21,7 @@
 // under the License.
 //
 // -------------------------------------------------------------------
-#include "erl_nif.h"
-#include "erl_nif_compat.h"
+#include <erl_nif.h>
 #include "lzf.h"
 #include <errno.h>
 
