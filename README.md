@@ -4,12 +4,12 @@ nsync is a redis master/slave replication client written in Erlang. When the nsy
 
 # Build
 
-   $ ./rebar compile
+   $ rebar3 compile
  
 # Run
 
-    $ erl -pa ebin
-    $ nsync:start_link().
+    $ rebar3 shell
+    > nsync:start_link(Opts::[nsync_opt()]).
 
 # Options
 
